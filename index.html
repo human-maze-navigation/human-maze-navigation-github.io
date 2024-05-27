@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Imitation Learning and Planning for Realtime Robot Navigation in Crowds.">
+  <meta name="keywords" content="Imitation Learning and Planning, robotics, foundation model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigating the Human Maze: Real-Time Robot Pathfinding with Generative Imitation Learning</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYH3N96LN5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZYH3N96LN5');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/slick.css">
+  <link rel="stylesheet" href="../static/css/slick-theme.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/slick.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://ieeexplore.ieee.org/document/9659409">
+              CoLoss-GAN: Collision-Free Human Trajectory Generation with a Collision Loss and GAN
+            </a>
+            <a class="navbar-item" href="https://ieeexplore.ieee.org/document/9900826">
+              Proactive Robot Movements in a Crowd by Predicting and Considering the Social Influence
+            </a>
+            <a class="navbar-item" href="https://ieeexplore.ieee.org/document/10309382">
+              Model-based Imitation Learning for Real-time Robot Navigation in Crowds
+            </a>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Navigating the Human Maze: Real-Time Robot Pathfinding with Generative Imitation Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://www.uni-due.de/is/martin_moder">Martin Moder</a>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/stephenadhi/">Stephen Adhisaputra</a>,</span>
+              <span class="author-block">
+                <a href="https://www.uni-due.de/is/josef_pauli">Josef Pauli</a>
+              </span> <br>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">University Duisburg-Essen</span>
+            </div>
+            <br>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+          <!--      <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2306.14846" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> 
+                <span class="link-block">
+                  <a href="http://arxiv.org/abs/2306.14846" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=YsmYvaeuoUg&list=PLILcqCo-rP5eUHchAO_nyRNl0kNgvW5iD&index=1" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/Mirorrn/Navigating-the-Human-Maze"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github-alt"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                  <!--
+                <span class="link-block">
+                  <a href="https://github.com/robodhruv/visualnav-transformer#data-wrangling"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i> </span>
+                    <span>Data</span>
+                  </a>
+                </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Results Carousel -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-bww1">
+            <video poster="" id="bww1" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/small/vid1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-go1-outside">
+            <video poster="" id="go1-outside" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/small/vid2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-soda3-left">
+            <video poster="" id="soda3-left" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/small/vid3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-rfs">
+            <video poster="" id="rfs" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/small/vid4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-go1-inside-1">
+            <video poster="" id="go1-inside-1" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/small/vid5.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              This work addresses navigation in crowded environments by integrating goal-conditioned generative models with Sampling-based Model Predictive Control (SMPC). We introduce goal-conditioned autoregressive models to generate crowd behaviors, capturing intricate interactions among individuals. The model processes potential robot trajectory samples and predicts the reactions of surrounding individuals, enabling proactive robotic navigation in complex scenarios. Extensive experiments show that this algorithm enables real-time navigation, significantly reducing collision rates and path lengths, and outperforming selected baseline methods. The practical effectiveness of this algorithm is validated on an actual robotic platform, demonstrating its capability in dynamic settings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--/ Abstract. -->
+      
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+
+        <div class="column">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              This work explores the potential of generative models, which are trained on human crowd videos, for cooperative robot action planning. These generative models, we believe, can offer a solution to the "robot freezing" problem by enabling robots to generate intuitive, human-like behaviors, promoting more natural robot-human cooperation. However, applying these models to crowd navigation presents challenges, including processing continuous actions, handling data multi-modality, and conditioning on future outcomes. Additionally, a policy trained solely on human videos won’t match a robot’s unique kinematic and dynamic constraints, and the datasets lack environment representations that robots can easily interpret.
+            </p>
+            <p>
+              To address these challenges, we propose to combine generative modelling with SMPC: (a) The dataset comprises recordings of crowd dynamics. (b) Using this dataset, a generative model is trained to forecast future position of individuals. (c) The robot, equipped with a 3D camera and 2D LiDAR sensor, detects and tracks pedestrian positions, and generates a cost map to avoid obstacles. On the left side of the images, four distinct trajectories are shown: agents’ past paths (red), predicted future paths (orange), the robot’s planned trajectory (green), and the robot’s global plan (thin red line). Cylinders represent the positions and outlines of humans. (d) The model predictive control framework, enhanced by the generative model, plans proactively robot trajectories that mimic human movements. (e) New observations can be added to the dataset, allowing the approach to scale with more data.
+            </p>
+            <figure id="architecture">
+              <img src="./static/images/Overview.pdf" alt="architecture" />
+            </figure>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3">Sampling based Planning</h2>
+        <div class="content has-text-justified">
+          <p>
+            This study examines the Model Predictive Path Integral (MPPI) method within SMPC. MPPI is distinguished by its sampling-based approach, enabling the planning of multiple potential actions or ‘samples’ for the collaborative robot. During the planning process, these samples are concurrently evaluated by a goal-conditioned generative model. Efficiency in this approach is enhanced through the use of programming frameworks known for their parallel computing capabilities, which facilitate the rapid analysis of the extensive samples generated by the MPPI method, thereby enabling more effective and robust decision-making.
+          </p>
+          <figure id="architecture">
+            <img src="./static/images/Figure_1.pdf" alt="architecture" />
+          </figure>
+        </div>
+
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop is-centered">
+      <center>
+        <h2 class="title is-3">Counterfactual Reasoning</h2>
+      </center>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          By incorporating goal conditioning, we limit the robot's ability to exploit human reactions, as individuals follow their own objectives, reducing adaptability to avoid collisions of the robot. A goal-conditioned generative model can also effectively direct the robot towards its goal, offering insights into both the human-like nature and efficiency of navigating in a crowd.
+      </p>
+      <figure id="sir">
+        <img src="./static/images/sir.svg" alt="sir" />
+      </figure>
+      <p>
+          SMPC and goal-conditioned generative models also provide a straightforward way for counterfactual reasoning. We can compare one <span style="color: rgb(202,59,57);">marginal</span> scene where the model is not integrated into the prediction with many scenes that are <span style="color: rgb(104, 155, 224);">conditioned</span> on the sampled robot  <span style="color: rgb(153, 214, 88);">plan</span> . By comparing the different types of predictions, it can be calculated how much the robot <span style="color: rgb(153, 214, 88);">plan</span> influences the scene. We call this value the Social Influence Reward (SIR). 
+      </p>
+      <p>
+        With SIR, it is possible to tune how confidently the robot should move. If it is set correctly, a balanced plan can be found, as presented in the following GIF, which is produced by rendering our GYM environment based on real-world human movements.
+    </p>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <img src="./static/videos/normal.gif" alt="normal1" width="80%" />
+          <div class="content has-text-justified" width="80%">
+          </div>
+        </div>
+        <div class="column is-half is-centered">
+          <img src="./static/videos/normal2.gif" alt="normal2" width="80%" />
+          <div class="content has-text-justified" width="80%">
+          </div>
+        </div>
+      </div>
+
+      <p> If SIR is set too high, the robot exhibits <i>robot-freezing</i> behavior.
+      </p> 
+      
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <img src="./static/videos/robot_freezing.gif" alt="robot_freezing" width="80%" />
+          <div class="content has-text-justified" width="80%">
+          </div>
+        </div>
+        <div class="column is-half is-centered">
+          <img src="./static/videos/robot_freezing2.gif" alt="robot_freezing2" width="80%" />
+          <div class="content has-text-justified" width="80%">
+          </div>
+        </div>
+      </div>
+    
+      <p> If SIR is set too a negative value, the robot exhibits an <i>annoying</i> behavior.
+      </p> 
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-half">
+          <img src="./static/videos/annoyotron.gif" alt="annoyotron" width="80%" />
+          <div class="content has-text-justified" width="80%">
+          </div>
+        </div>
+        <div class="column is-half is-centered">
+          <img src="./static/videos/annoyotron2.gif" alt="annoyotron2" width="80%" />
+          <div class="content has-text-justified" width="80%">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop is-centered">
+      <center>
+        <h2 class="title is-3">Real World Demonstrations</h2>
+      </center>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          To accomplish real-world locomotion tasks, the proposed algorithm is implemented on the mobile robot platform LoCoBot.
+        </p>
+        <figure id="architecture">
+          <img src="./static/images/LoCoBot.png" alt="locobot" width="30%" />
+        </figure>
+      </div>
+      Based on the experiments, the robot effectively navigates through corridors with moderate human activity and adeptly maneuvers around both static obstacles and moving humans in confined spaces. The proposed navigation system, designed with social awareness, ensures the robot remains agile and adaptive. It smoothly navigates complex environments while adhering to the broader goal set by a global plan. This demonstration highlights the planning algorithm’s ability to dynamically model and account for human behavior in real-time scenarios.
+  </section>
+<!--
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@inproceedings{shah2023vint,
+          title     = {Vi{NT}: A Foundation Model for Visual Navigation},
+          author    = {Dhruv Shah and Ajay Sridhar and Nitish Dashora and Kyle Stachowicz and Kevin Black and Noriaki Hirose and Sergey Levine},
+          booktitle = {7th Annual Conference on Robot Learning},
+          year      = {2023},
+          url       = {https://arxiv.org/abs/2306.14846}
+        }</code></pre>
+      </div>
+    </section>
+        -->
+    <br>
+    <center class="is-size-10">
+      The website design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
+          class="dnerf">Nerfies</span></a>.
+    </center>
+    <br>
+
+</body>
+
+</html>
